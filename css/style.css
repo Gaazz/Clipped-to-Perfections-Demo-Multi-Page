@@ -1010,6 +1010,12 @@ body {
     margin-top: -100px;
   }
   
+  /* Remove gap between map-section and section-gray */
+  .map-section + .section.section-gray {
+    margin-top: -100px !important;
+    padding-top: 0px !important;
+  }
+  
   /* Reduce section padding on mobile */
   .section {
     padding: 60px 20px;
@@ -1125,4 +1131,21 @@ html, body { overflow-x: hidden; }
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 120px;
+}
+
+
+/* Success page mobile optimization */
+@media (max-width: 968px) {
+  /* Make success heading smaller on mobile to prevent wrapping */
+  section[style*="home3.jpg"] h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+  
+  /* Ensure success card has proper padding on mobile */
+  section[style*="home3.jpg"] .container > div {
+    padding: 40px 20px !important;
+  }
 }
